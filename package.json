@@ -1,0 +1,41 @@
+{
+  "name": "nexus-ai-factoryos",
+  "version": "1.0.0",
+  "description": "Complete Industrial Operating System for Indian MSMEs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && npm run test",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "db:seed": "cd backend && npm run db:seed"
+  },
+  "keywords": [
+    "manufacturing",
+    "IoT",
+    "predictive-maintenance",
+    "digital-twin",
+    "AI",
+    "MSME",
+    "factory",
+    "industrial"
+  ],
+  "author": "NEXUS AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
