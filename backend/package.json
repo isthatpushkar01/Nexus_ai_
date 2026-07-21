@@ -1,0 +1,56 @@
+{
+  "name": "nexus-ai-backend",
+  "version": "1.0.0",
+  "description": "NEXUS AI FactoryOS Backend API",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "db:seed": "tsx src/scripts/seed.ts",
+    "db:migrate": "tsx src/scripts/migrate.ts",
+    "db:create-indexes": "tsx src/scripts/createIndexes.ts"
+  },
+  "keywords": [
+    "manufacturing",
+    "IoT",
+    "predictive-maintenance",
+    "API"
+  ],
+  "author": "NEXUS AI Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.1.1",
+    "bcryptjs": "^2.4.3",
+    "redis": "^4.6.11",
+    "socket.io": "^4.7.2",
+    "mqtt": "^5.3.1",
+    "zod": "^3.22.4",
+    "winston": "^3.11.0",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "cors": "^2.8.5",
+    "compression": "^1.7.4",
+    "axios": "^1.6.2",
+    "bull": "^4.11.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "@types/bcryptjs": "^2.4.6",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0"
+  }
+}
